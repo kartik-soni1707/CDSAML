@@ -11,3 +11,6 @@
 1. **clean(tweet)**  </br>
     string ----> list  </br>
     (removes URLs, Mentions, Numbers, Emojis, And trims words) </br>
+    Special characters are removed </br>
+    URLs are replaced with "@url" </br>
+    Mentions are replaced with "@mention"</br>
