@@ -10,7 +10,8 @@
 2. **tweet2vec(tweet)** </br>
     takes tweet and returns a 300 by 1 sized numpy array </br>
     similar tweets are closer vectors
-    
+    download model at </br>
+    https://fasttext.cc/docs/en/english-vectors.html#content </br>
 3. **similarity(tweet1, tweet2)** </br>
     takes 2 tweets and returns a number between 0 and 1 representing similarity </br>
     
