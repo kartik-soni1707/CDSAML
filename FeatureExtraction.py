@@ -1,3 +1,6 @@
+import gensim
+model = gensim.models.KeyedVectors.load_word2vec_format('./wiki-news-300d-1M.vec', binary=False)
+
 bigrams  = ['check out',
  'for the',
  'the latest',
@@ -35,3 +38,16 @@ def HasNGrams(tweet, n=2):
             if trigram in tweet:
                 return True
         return False
+    
+    
+def tweet2vec(tweet):
+    vec = np.zeros(300,)
+    for word in tweet:
+        vec += model['word']
+    return vec
+
+def similarity(tweet1, tweet2):
+    vec1 = tweet2vec(tweet1)
+    vec2 = tweet2vec(tweet2)
+    return np.dot(vec1, vec2)/(np.linalg.norm(vec1) * np.linalg.norm(vec2))
+    
