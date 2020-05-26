@@ -6,3 +6,8 @@
     tweet : Takes a list or a string as input  </br>
     n : order (2 mean bigram 3 means trigram)  </br>
     =====> returns True/False  </br>
+
+### Cleaning ###
+1. **clean(tweet)**  </br>
+    string ----> list  </br>
+    (removes URLs, Mentions, Numbers, Emojis, And trims words) </br>
