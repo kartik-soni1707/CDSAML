@@ -19,7 +19,7 @@ df1=df1.loc[:,['Tweet','Ans']].values
 df2=df2.loc[:,['Tweet','Ans']].values
 df3=np.concatenate((df1,df2),axis=0)
 np.random.shuffle(df3)
-df3=df3[0:10000,:]
+df3=df3[5000:5050,:]
 def proc_words(df3):
     dataset=[]
     counter=0
@@ -40,6 +40,7 @@ def proc_words(df3):
     df=pd.DataFrame(dataset)
     return df
 df=proc_words(df3)
+df.to_csv("test.csv")
 vectorizer=CountVectorizer()
 counts=vectorizer.fit_transform(df[0].values)
 targets=df[1].values
