@@ -8,7 +8,80 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+<style>
+    ::-webkit-input-placeholder {
+  text-align: center;
+}
+    *{
+        
+        margin-top: 0;
+        background-color: seashell;
+    }
+    .login{
+        width: 500px;
+        margin: auto;
+        margin-top:0;
+        border-left: 10px groove lime;
+        border-right: 10px groove lime;
+        border-bottom: 10px groove lime;
+        height: 250px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: turquoise;
+    }
+    h1{
+        font-family: 'Righteous', cursive;
+        font-size: 35px;
+        width: 450px;
+        margin: auto;
+        margin-bottom: 26px;
+        
+        text-align: center;
+        color: rgb(0, 110, 255);
+        background-color: white;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    form{
+        background-color: turquoise;
+        
+        margin:auto;
+    }
+    input{
+        font-size:30px;
+        border-radius: 50px;
+        border: none;
+        width:auto;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 29px;
+        margin-bottom: 27px;
+        padding:15px;
+    }
+    input:focus{
+        outline: none;
+    }
+    button:hover{
+        background-color: black;
+        color: red;
+    }
+    button{
+        font-family: 'Righteous', cursive;
+        height:35px;
+        width:80px;
+        margin-left:180px;
+        font-size: 20px;
+        padding:9x;
+        border: none;
+        border-radius: 25px;
+    }
+    .ans{
+        background-color: turquoise;
+        margin-left: 153px;
+    }
+</style>
 </head>
 
 <body>
@@ -17,12 +90,15 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="experience" placeholder="Enter message" required="required" />
+        
+        <input type="text" name="experience" placeholder="Enter your message here" required="required" />
         
 
         <button type="submit" class="btn btn-primary btn-block btn-large" >Predict</button>
+    
     </form>
-<br>{{prediction_text}}
+<br>
+<div class="ans">{{prediction_text}}</div>
  </br>
    
 
@@ -34,4 +110,3 @@ function myFunction(parameter) {
 </script>
 
 </body>
-</html>
